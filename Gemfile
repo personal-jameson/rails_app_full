@@ -60,3 +60,5 @@ gem 'capistrano-bundler', require: false
 gem 'capistrano-rvm'
 # gem 'rvm1-capistrano3', require: false
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
