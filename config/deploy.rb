@@ -5,7 +5,7 @@ set :application, "rails_app_full"
 set :repo_url, "git@github.com:personal-jameson/rails_app_full.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
@@ -19,9 +19,10 @@ set :repo_url, "git@github.com:personal-jameson/rails_app_full.git"
 
 # Default value for :pty is false
 set :pty, true
+# set :rvm1_map_bins, %w{rake gem bundle ruby}
 
 # Default value for :linked_files is []
-append :linked_files, %w(config/database.yml config/application.yml)
+append :linked_files, "config/database.yml", "config/application.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "public/uploads", "vendor/bundle"

@@ -9,8 +9,8 @@
 
 set :stage, :production
 set :rails_env, :production
-set :deploy_to, '/deploy/apps/rails_app_full'
-set :branch, :config_deploy
+set :deploy_to, '/home/deploy/apps/rails_app_full'
+set :branch, :master
 server ENV['SERVER_PUBLIC_IP'], user: 'deploy', roles: %w(web app db)
 
 # role-based syntax
