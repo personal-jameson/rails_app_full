@@ -18,4 +18,11 @@ class Api::FacebooksController < ApplicationController
     end
     render json: {}, status: :forbidden
   end
+
+  def create
+  	Rails.logger.info('callback create')
+  	Rails.logger.info(params)
+
+  	render json: 'success', status: :ok
+  end
 end
